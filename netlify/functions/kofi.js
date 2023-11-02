@@ -102,11 +102,6 @@ app.use('/', async function (req, res) {
 		embed.addField(`Amount`, `${payload.amount} ${payload.currency}`, true);
 		if (payload.message && payload.message !== 'null')
 			embed.addField(`Message`, `${payload.message}`);
-		embed.setFooter(
-			`Thank you for supporting us!`,
-			`https://media.discordapp.net/attachments/1016433800298905631/1169773172162318337/imageedit_2_9563142246.png`
-		);
-		embed.setTimestamp();
 
 		await webhook.send(embed);
 	} catch (err) {
