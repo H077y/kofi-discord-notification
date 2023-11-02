@@ -81,20 +81,20 @@ app.use('/', async function (req, res) {
 	try {
 		const embed = new MessageBuilder();
 
-		embed.setAuthor('Ko-fi', 'https://i.imgur.com/J0egcX2.png');
-		embed.setThumbnail('https://i.imgur.com/J0egcX2.png');
+		embed.setAuthor('Ko-fi', 'https://media.discordapp.net/attachments/1016433800298905631/1169773172162318337/imageedit_2_9563142246.png');
+		embed.setThumbnail('https://cdn.discordapp.com/icons/1016422745266995310/a_d61e81edbd791a414bbdc87b5ba45976.gif');
 		embed.setTitle('New supporter on Ko-fi ☕');
 		if (kofi_username) embed.setURL(`https://ko-fi.com/${kofi_username}`);
 
 		switch (payload.tier_name) {
 			case 'Silver':
-				embed.setColor('#797979');
+				embed.setColor('#e45dd9');
 			case 'Gold:':
-				embed.setColor('#ffc530');
+				embed.setColor('#e45dd9');
 			case 'Platinum':
-				embed.setColor('#2ed5ff');
+				embed.setColor('#e45dd9');
 			default:
-				embed.setColor('#9b59b6');
+				embed.setColor('#e45dd9');
 		}
 
 		embed.addField(`From`, `${payload.from_name}`, true);
@@ -104,7 +104,7 @@ app.use('/', async function (req, res) {
 			embed.addField(`Message`, `${payload.message}`);
 		embed.setFooter(
 			`Thank you for supporting us!`,
-			`https://github.githubassets.com/images/modules/site/icons/funding_platforms/ko_fi.svg`
+			`https://media.discordapp.net/attachments/1016433800298905631/1169773172162318337/imageedit_2_9563142246.png`
 		);
 		embed.setTimestamp();
 
